@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    text-align: center;
+    padding: 40px;
+}
+.page { display: none; }
+.active { display: block; }
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+button:hover { background: #e63950; }
+h1, h2 { color: #b3003b; }
+.heart { font-size: 30px; }
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>Hi my love ❤️</h1>
+    <p>This is for you</p>
+    <button onclick="nextPage(2)">Open My Heart 💌</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h2>Do you love me the same way? 💖</h2>
+    <button onclick="nextPage(3)">YESSS ❤️</button>
+    <button onclick="notApplicable()">NO 😏</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>UNILA ENAI THOLAITHEN</h1>
+    <div class="heart">❤️❤️❤️❤️❤️</div>
+    <button onclick="nextPage(4)">Click Here 💕</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <h2>The Anniversary Letter for You 💌</h2>
+    <p>
+        (I’ll add the content later here ❤️)
+    </p>
+    <button onclick="nextPage(5)">See Our Photo 📸</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+    <h2>LOVE YOU ❤️</h2>
+    <img src="YOUR_PHOTO_LINK_HERE" width="300" style="border-radius:20px;">
+</div>
+
+<script>
+function nextPage(num) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + num).classList.add('active');
+}
+
+function notApplicable() {
+    alert("It is not applicable my dear 😘❤️");
+}
+</script>
+
+</body>
+</html>
